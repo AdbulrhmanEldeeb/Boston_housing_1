@@ -9,10 +9,14 @@ st.set_page_config('Boston housing')
 st.markdown('# Prediction of boston housing')
 import streamlit as st
 import pandas as pd
+# pipreqs --encoding=utf8
+# git remote add origin https://github.com/AdbulrhmanEldeeb/Boston_housing_1
+
 
 df = pd.read_csv('Housing.csv')
 x=df.values[:,:-1]
 y=df.values[:,-1]
+st.sidebar.title("enter the information")
 def inputs(): 
     crim = st.sidebar.slider("CRIM", df['CRIM'].min(), df['CRIM'].max())
     ZN = st.sidebar.slider("ZN", df['ZN'].min(), df['ZN'].max())
