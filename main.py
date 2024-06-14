@@ -16,6 +16,7 @@ import pandas as pd
 df = pd.read_csv('Housing.csv')
 x=df.values[:,:-1]
 y=df.values[:,-1]
+
 st.sidebar.title("enter the information")
 def inputs(): 
     crim = st.sidebar.slider("CRIM", df['CRIM'].min(), df['CRIM'].max())
